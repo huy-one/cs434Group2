@@ -56,6 +56,7 @@ class _AddPageState extends State<AddPage> {
               labelText: 'size',
             ),
           ),
+          //Tao nut bam de thuc chuc nang kich hoat(Minh Nhat)
           FlatButton(
               onPressed: () {
                 for(int i=0;i<_sizeController.)
