@@ -74,7 +74,7 @@ class _AddPageState extends State<AddPage> {
 
                 });
               },
-              child: Text('ADD')) //Lỗi đặt tên không hợp lệ (Trần Nguyễn Dân)
+              child: Text('ADD')) //Loi dat ten khong hop le (Tran Nguyen Dan)
         ],
       ),
     );
