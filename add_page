@@ -1,0 +1,82 @@
+import 'package:flutter/material.dart';
+import 'package:sneaker_app/screen/dialogs/error_dialog.dart';
+import 'package:sneaker_app/services/firestore.dart';
+
+class AddPage extends StatefulWidget {
+  const AddPage({Key? key}) : super(key: key);
+
+  @override
+  _AddPageState createState() => _AddPageState();
+}
+
+class _AddPageState extends State<AddPage> {
+  StoreDatabase _storeDatabase = new StoreDatabase();
+  TextEditingController _imgUrlController = new TextEditingController();
+  TextEditingController _nameController = new TextEditingController();
+  TextEditingController _descController = new TextEditingController();
+  TextEditingController _priceController = new TextEditingController();
+  TextEditingController _sizeController = new TextEditingController();
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Column(
+        children: [
+          TextField(
+            controller: _imgUrlController,
+            decoration: InputDecoration(
+              hintText: 'here',
+              labelText: 'ImgUrl',
+            ),
+          ),
+          TextField(
+            controller: _nameController,
+            decoration: InputDecoration(
+              hintText: 'here',
+              labelText: 'Name',
+            ),
+          ),
+          TextField(
+            controller: _descController,
+            decoration: InputDecoration(
+              hintText: 'here',
+              labelText: 'Desc',
+            ),
+          ),
+          TextField(
+            controller: _priceController,
+            decoration: InputDecoration(
+              hintText: 'here',
+              labelText: 'price',
+            ),
+          ),
+          TextField(
+            controller: _sizeController,
+            decoration: InputDecoration(
+              hintText: 'here',
+              labelText: 'size',
+            ),
+          ),
+          FlatButton(
+              onPressed: () {
+                for(int i=0;i<_sizeController.)
+                setState(() {
+                  _storeDatabase.addProduct(
+                      _imgUrlController.text,
+                      _nameController.text,
+                      _descController.text,
+                      _priceController.text,
+                      _sizeController.text, () {
+                    ErrorDialog.showErrorDialog(
+                        context, "ADD DONE", 'name');
+                  },
+                          (error) => ErrorDialog.showErrorDialog(
+                          context, "ADD Fail", error));
+
+                });
+              },
+              child: Text('ADD'))
+        ],
+      ),
+    );
+  }
+}
