@@ -49,6 +49,8 @@ class _AddPageState extends State<AddPage> {
               labelText: 'price',
             ),
           ),
+          //Tao Text nhap kich thuoc(Hieu)
+          
           TextField(
             controller: _sizeController,
             decoration: InputDecoration(
